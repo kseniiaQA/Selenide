@@ -20,7 +20,7 @@ public class CardTest {
     void shouldSubmitRequest() {
         open("http://localhost:9999");
         SelenideElement form = $("[id=root]");
-        form.$("[data-test-id=name] input").setValue("Елена");
+        form.$("[data-test-id=name] input").setValue("Ксения");
         form.$("[data-test-id=phone] input").setValue("+79340000000");
         form.$("[data-test-id=agreement]").click();
         form.$("[role=button]").click();
