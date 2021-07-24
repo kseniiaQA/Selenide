@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/eclqrpm6e26geod8?svg=true)](https://ci.appveyor.com/project/kseniia/veyor)
+[![Build status](https://ci.appveyor.com/api/projects/status/x2hg6yrnvnaixgex?svg=true)](https://ci.appveyor.com/project/kseniia/selenide)
