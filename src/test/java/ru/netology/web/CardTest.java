@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import sun.tools.jar.resources.jar;
 
 import java.util.List;
 
@@ -14,12 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CardTest {
-    //    java -jar artifacts\app-order.jar
 
-//    @BeforeAll
-//    void setUp(){
-//        $(chrome --headless --remote-debugging-port=9222 chromium.org);
-//    }
 
     @Test
     void shouldSubmitRequest() {
