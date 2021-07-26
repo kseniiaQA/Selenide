@@ -43,7 +43,7 @@ public class CardTest {
     void shouldNotPass() {
         open("http://localhost:9999");
         SelenideElement form = $("[id=root]");
-        form.$("[data-test-id=name] input").setValue("Алла");
+        form.$("[data-test-id=name] input").setValue("Алла1");
         form.$("[data-test-id=phone] input").setValue("+79868758413");
         form.$("[data-test-id=agreement]").click();
         form.$("[role=button]").click();
