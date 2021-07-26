@@ -1,20 +1,18 @@
 package ru.netology.web;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.impl.WebElementSelector;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import sun.tools.jar.resources.jar;
-
-import java.util.List;
 
 import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CardTest {
+
+    @BeforeEach
+    public void setUp() {
+        open("http://localhost:9999");
+    }
 
 
     @Test
