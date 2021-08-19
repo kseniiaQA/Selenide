@@ -60,14 +60,32 @@ public class CardTest {
     }
 
     @Test
-    void shouldNotPass() {
+    void shouldNotPassWithNoAgreement() {
 
         SelenideElement form = $("[method=post]");
         form.$("[data-test-id=name] input").setValue("Алла");
         form.$("[data-test-id=phone] input").setValue("+79868758413");
 
         form.$("[role=button]").click();
-        form.$(".input_invalid").exists();
+        form.$("[data-test-id=agreement].input_invalid").exists();
     }
+    @Test
+    public void nameValidationEmpty() {
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=phone] input").setValue("+71234567890");
+        form.$("[data-test-id=agreement]").click();
+        form.$("[role=button]").click();
+        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
+    }
+    
+     @Test
+    public void phoneValidationEmpty() {
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=name] input").setValue("Орлов Василий Карлович");
+        form.$("[data-test-id=agreement]").click();
+        form.$("[role=button]").click();
+        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
+    }
+    
 }
 
