@@ -72,7 +72,7 @@ public class CardTest {
     @Test
     public void nameValidationEmpty() {
         SelenideElement form = $(".form");
-        form.$("[data-test-id=phone] input").setValue("+71234567890");
+        form.$("[data-test-id=phone] input").setValue("+71234567870");
         form.$("[data-test-id=agreement]").click();
         form.$("[role=button]").click();
         $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
@@ -81,7 +81,7 @@ public class CardTest {
      @Test
     public void phoneValidationEmpty() {
         SelenideElement form = $(".form");
-        form.$("[data-test-id=name] input").setValue("Орлов Василий Карлович");
+        form.$("[data-test-id=name] input").setValue("Алла");
         form.$("[data-test-id=agreement]").click();
         form.$("[role=button]").click();
         $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
