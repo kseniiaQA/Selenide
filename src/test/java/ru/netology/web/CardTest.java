@@ -38,7 +38,7 @@ public class CardTest {
     }
 
     @Test
-    void shouldNotPass() {
+    void shouldNotPassIncorrectName() {
 
         SelenideElement form = $("[method=post]");
         form.$("[data-test-id=name] input").setValue("Алла1");
@@ -49,7 +49,7 @@ public class CardTest {
     }
 
     @Test
-    void shouldNotPass1() {
+    void shouldNotPassIncorrectTelephoneNumber() {
 
         SelenideElement form = $("[method=post]");
         form.$("[data-test-id=name] input").setValue("Алла");
@@ -60,7 +60,7 @@ public class CardTest {
     }
 
     @Test
-    void shouldNotPass2() {
+    void shouldNotPass() {
 
         SelenideElement form = $("[method=post]");
         form.$("[data-test-id=name] input").setValue("Алла");
